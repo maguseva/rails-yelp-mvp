@@ -42,4 +42,6 @@ restaurants_attributes = [
   }
 ]
 Restaurant.create!(restaurants_attributes)
+
+Review.create!(content: 'good one!', rating: 5, restaurant: Restaurant.last)
 puts 'Finished!'
