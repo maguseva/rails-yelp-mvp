@@ -20,6 +20,11 @@
   <%= @restaurant.category %>
 </p>
 
+
+<h1>Review now!</h1>
+
+<%= render './reviews/form', restaurant: @restaurant, review: @review %>
+
 <p>
   <strong>Reviews:</strong>
   <% @restaurant.reviews.each do |review| %>
@@ -27,5 +32,5 @@
   <p>Rating: <%= review.rating %></p>
   <% end %>
 </p>
-<%= link_to 'Add a review', new_restaurant_review_path(@restaurant), class: "btn btn-primary"%> |
+
 <%= link_to 'Back', restaurants_path, class: "btn btn-primary" %>
